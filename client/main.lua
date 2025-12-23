@@ -26,3 +26,12 @@ RegisterNUICallback('vehLocate', function()
         SetNewWaypoint(c.x, c.y)
     end
 end)
+RegisterCommand('recoverphone', function(src)
+  local chance = math.random(1,100)
+  if chance <= 25 then
+    MySQL.insert('INSERT INTO phone_evidence (identifier, recovered) VALUES (?,1)', {'unknown'})
+    TriggerClientEvent('chat:addMessage', src, {args={'Evidence','Phone data partially recovered'}})
+  else
+    TriggerClientEvent('chat:addMessage', src, {args={'Evidence','Recovery failed'}})
+  end
+end)
