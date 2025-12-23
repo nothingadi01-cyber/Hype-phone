@@ -14,3 +14,10 @@
   background: #1abc9c;
   margin-left: auto;
 }
+.gallery-img {
+  width: 90px;
+  height: 90px;
+  margin: 5px;
+  border-radius: 8px;
+  object-fit: cover;
+}
