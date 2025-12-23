@@ -41,3 +41,17 @@ Config.Animations = {
     call = { dict = 'cellphone@', anim = 'cellphone_call_listen_base' },
     camera = { dict = 'cellphone@self', anim = 'selfie' }
 }
+Config.JobApps = {
+    police = {
+        apps = {'dispatch', 'panic', 'gps'},
+        canSee = {'police'}
+    },
+    ambulance = {
+        apps = {'dispatch', 'panic', 'gps'},
+        canSee = {'ambulance'}
+    },
+    gang = {
+        apps = {'gangchat', 'darkweb'},
+        canSee = {'gang'}
+    }
+}
