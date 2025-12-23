@@ -43,3 +43,24 @@ CREATE TABLE IF NOT EXISTS phone_calls (
     status VARCHAR(20),
     time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+CREATE TABLE IF NOT EXISTS phone_crypto_wallets (
+    identifier VARCHAR(60) PRIMARY KEY,
+    balance INT DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS phone_dark_messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sender VARCHAR(60),
+    receiver VARCHAR(60),
+    message TEXT,
+    time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS phone_dark_orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    buyer VARCHAR(60),
+    item VARCHAR(50),
+    price INT,
+    status VARCHAR(20),
+    time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
