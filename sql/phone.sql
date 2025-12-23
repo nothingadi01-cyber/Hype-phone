@@ -86,3 +86,12 @@ CREATE TABLE IF NOT EXISTS phone_social_posts (
     likes INT DEFAULT 0,
     time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+CREATE TABLE IF NOT EXISTS phone_voice_notes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sender VARCHAR(60),
+    receiver VARCHAR(60),
+    group_id INT NULL,
+    audio VARCHAR(255),
+    duration FLOAT,
+    time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
