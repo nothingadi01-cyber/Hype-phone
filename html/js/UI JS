@@ -1,0 +1,3 @@
+function hasAccess(job, allowed) {
+    return allowed.includes(job);
+}
