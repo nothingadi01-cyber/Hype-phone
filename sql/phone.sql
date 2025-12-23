@@ -192,3 +192,8 @@ CREATE TABLE IF NOT EXISTS phone_market_items (
   status VARCHAR(20) DEFAULT 'listed'
 );
 DELETE FROM phone_stories WHERE expires < UNIX_TIMESTAMP();
+CREATE TABLE IF NOT EXISTS phone_analytics (
+  app VARCHAR(50),
+  uses INT DEFAULT 0,
+  last_use INT
+);
