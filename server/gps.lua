@@ -3,3 +3,4 @@ RegisterNetEvent('lb-phone:shareLocation', function(coords)
         TriggerClientEvent('lb-phone:setWaypoint', id, coords)
     end
 end)
+<button onclick="shareLocation()">📍 Share Location</button>
