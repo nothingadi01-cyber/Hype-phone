@@ -59,3 +59,13 @@
 
   <button onclick="toggleSilent()">Silent Mode</button>
 </div>
+<div id="callApp">
+  <input id="callNumber" placeholder="Enter number">
+  <button onclick="dial()">Call</button>
+</div>
+
+<div id="incomingCall" style="display:none">
+  <p id="callerId"></p>
+  <button onclick="acceptCall()">Accept</button>
+  <button onclick="rejectCall()">Reject</button>
+</div>
