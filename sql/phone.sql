@@ -170,3 +170,17 @@ CREATE TABLE IF NOT EXISTS phone_stories (
   caption VARCHAR(140),
   expires INT
 );
+CREATE TABLE IF NOT EXISTS phone_events (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  creator VARCHAR(60),
+  title VARCHAR(50),
+  description TEXT,
+  x FLOAT, y FLOAT, z FLOAT,
+  time INT
+);
+
+CREATE TABLE IF NOT EXISTS phone_event_rsvp (
+  event_id INT,
+  attendee VARCHAR(60),
+  PRIMARY KEY (event_id, attendee)
+);
