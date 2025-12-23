@@ -163,3 +163,10 @@ CREATE TABLE IF NOT EXISTS phone_backups (
   data LONGTEXT,
   last_backup INT
 );
+CREATE TABLE IF NOT EXISTS phone_stories (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  author VARCHAR(60),
+  image VARCHAR(255),
+  caption VARCHAR(140),
+  expires INT
+);
