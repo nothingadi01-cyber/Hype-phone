@@ -25,3 +25,11 @@ Config.PhoneAnim = {
     dict = 'cellphone@',
     anim = 'cellphone_text_read_base'
 }
+Config.Sound = {
+    DefaultVolume = 0.5,
+    Ringtones = {
+        'ringtone',
+        'ringtone2',
+        'ringtone3'
+    }
+}
