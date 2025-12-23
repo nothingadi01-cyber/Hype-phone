@@ -58,3 +58,10 @@ RegisterCommand('phoneadmin', function(src)
 end)
 SendNUIMessage({ action = 'openApp', app = 'bank' })
 TriggerServerEvent('lb-phone:track', 'bank')
+
+AddEventHandler('onResourceStop', function(res)
+    if res == GetCurrentResourceName() then
+        SetNuiFocus(false, false)
+        ClearPedTasks(PlayerPedId())
+    end
+end)
