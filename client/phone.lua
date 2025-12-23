@@ -33,3 +33,8 @@ function IsPlayerInMLO()
     end
     return false
 end
+PhoneOpenAnim()
+-- instead of PlayPhoneAnim()
+
+PhoneCloseAnim()
+-- instead of StopPhoneAnim()
