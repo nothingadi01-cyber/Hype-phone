@@ -17,3 +17,16 @@ CREATE TABLE IF NOT EXISTS phone_messages (
     message TEXT,
     time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+CREATE TABLE IF NOT EXISTS phone_bank_accounts (
+    identifier VARCHAR(60) PRIMARY KEY,
+    phone_number VARCHAR(20) UNIQUE,
+    pin VARCHAR(10) DEFAULT '1234'
+);
+
+CREATE TABLE IF NOT EXISTS phone_bank_logs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sender VARCHAR(20),
+    receiver VARCHAR(20),
+    amount INT,
+    time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
