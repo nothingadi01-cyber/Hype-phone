@@ -18,3 +18,35 @@ client_scripts {
 server_scripts {
     'server/main.lua'
 }
+
+fx_version 'cerulean'
+game 'gta5'
+
+author 'Adii Patel'
+description 'LB Ultra Phone'
+version '1.0.0'
+
+ui_page 'html/index.html'
+
+files {
+    'html/index.html',
+    'html/css/*.css',
+    'html/js/*.js',
+    'html/sounds/*.ogg'
+}
+
+shared_scripts {
+    'config.lua'
+}
+
+client_scripts {
+    'client/framework.lua',
+    'client/phone.lua',
+    'client/animations.lua'
+}
+
+server_scripts {
+    '@oxmysql/lib/MySQL.lua',
+    'server/framework.lua',
+    'server/main.lua'
+}
