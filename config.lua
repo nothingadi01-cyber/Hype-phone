@@ -66,3 +66,7 @@ Config.AppStore = {
         { name = 'crypto', label = 'Crypto', premium = true }
     }
 }
+Config.AdminGroups = {
+  admin = true,
+  god = true
+}
