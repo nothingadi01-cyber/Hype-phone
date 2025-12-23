@@ -39,3 +39,8 @@ TriggerClientEvent('lb-phone:incomingCall', -1, {
   from = 'SOS',
   to = 'EMS'
 })
+RegisterNUICallback('openPremiumApp', function(data, cb)
+  TriggerServerEvent('lb-phone:checkSub', function(plan)
+    if plan ~= 'none' then cb(true) else cb(false) end
+  end)
+end)
