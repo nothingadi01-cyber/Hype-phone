@@ -64,3 +64,17 @@ CREATE TABLE IF NOT EXISTS phone_dark_orders (
     status VARCHAR(20),
     time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+CREATE TABLE IF NOT EXISTS phone_apps (
+    identifier VARCHAR(60),
+    app VARCHAR(50),
+    installed TINYINT DEFAULT 1,
+    PRIMARY KEY (identifier, app)
+);
+
+CREATE TABLE IF NOT EXISTS phone_settings (
+    identifier VARCHAR(60) PRIMARY KEY,
+    theme VARCHAR(20) DEFAULT 'dark',
+    wallpaper VARCHAR(100) DEFAULT 'default.jpg',
+    ringtone VARCHAR(50) DEFAULT 'ringtone',
+    volume FLOAT DEFAULT 0.5
+);
