@@ -55,3 +55,14 @@ Config.JobApps = {
         canSee = {'gang'}
     }
 }
+Config.AppStore = {
+    Apps = {
+        { name = 'chat', label = 'Messages', free = true },
+        { name = 'bank', label = 'Bank', free = true },
+        { name = 'camera', label = 'Camera', free = true },
+        { name = 'gallery', label = 'Gallery', free = true },
+        { name = 'dispatch', label = 'Dispatch', job = 'police' },
+        { name = 'darkweb', label = 'Dark Web', job = 'gang' },
+        { name = 'crypto', label = 'Crypto', premium = true }
+    }
+}
