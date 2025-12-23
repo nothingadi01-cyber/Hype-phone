@@ -33,3 +33,11 @@ Config.Sound = {
         'ringtone3'
     }
 }
+
+Config.Animations = {
+    open = { dict = 'cellphone@', anim = 'cellphone_text_in' },
+    idle = { dict = 'cellphone@', anim = 'cellphone_text_read_base' },
+    close = { dict = 'cellphone@', anim = 'cellphone_text_out' },
+    call = { dict = 'cellphone@', anim = 'cellphone_call_listen_base' },
+    camera = { dict = 'cellphone@self', anim = 'selfie' }
+}
