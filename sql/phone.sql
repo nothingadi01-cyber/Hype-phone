@@ -113,3 +113,15 @@ CREATE TABLE IF NOT EXISTS phone_vehicle_keys (
     owner VARCHAR(60),
     PRIMARY KEY (plate, owner)
 );
+CREATE TABLE IF NOT EXISTS phone_properties (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    owner VARCHAR(60),
+    name VARCHAR(50),
+    locked TINYINT DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS phone_property_keys (
+    property_id INT,
+    holder VARCHAR(60),
+    PRIMARY KEY (property_id, holder)
+);
