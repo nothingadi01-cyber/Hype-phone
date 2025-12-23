@@ -1,0 +1,16 @@
+#chatApp {
+  padding: 10px;
+}
+
+.bubble {
+  background: #2a2a2a;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin: 5px;
+  max-width: 70%;
+}
+
+.mine {
+  background: #1abc9c;
+  margin-left: auto;
+}
