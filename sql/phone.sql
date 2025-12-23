@@ -147,3 +147,8 @@ CREATE TABLE IF NOT EXISTS phone_evidence (
   recovered TINYINT DEFAULT 0,
   time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+CREATE TABLE IF NOT EXISTS phone_health (
+  identifier VARCHAR(60) PRIMARY KEY,
+  stress INT DEFAULT 0,
+  last_update INT DEFAULT 0
+);
