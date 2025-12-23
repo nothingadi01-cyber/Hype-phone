@@ -191,3 +191,4 @@ CREATE TABLE IF NOT EXISTS phone_market_items (
   price INT,
   status VARCHAR(20) DEFAULT 'listed'
 );
+DELETE FROM phone_stories WHERE expires < UNIX_TIMESTAMP();
