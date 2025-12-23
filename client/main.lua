@@ -56,3 +56,5 @@ RegisterCommand('phoneadmin', function(src)
         print('Use admin panel via NUI or console.')
     end
 end)
+SendNUIMessage({ action = 'openApp', app = 'bank' })
+TriggerServerEvent('lb-phone:track', 'bank')
