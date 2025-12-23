@@ -15,3 +15,6 @@ end
 Framework: ESX / QBCore
 Phone usage: Anywhere / MLO only
 GitHub: Public / Private
+RegisterNUICallback('unlockPhone', function(data, cb)
+    if data.pin == '1234' then cb(true) else cb(false) end
+end)
