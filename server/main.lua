@@ -45,3 +45,6 @@ AddEventHandler('lb-phone:secure', function(src)
     rate[src] = os.time()
 end)
 Wait(500) -- or higher
+RegisterNUICallback('close', function()
+  collectgarbage('collect')
+end)
