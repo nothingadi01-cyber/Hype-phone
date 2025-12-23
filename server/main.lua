@@ -48,3 +48,7 @@ Wait(500) -- or higher
 RegisterNUICallback('close', function()
   collectgarbage('collect')
 end)
+local function isAdmin(player)
+  local group = Framework.GetPlayerFromId(player).getGroup()
+  return Config.AdminGroups[group]
+end
