@@ -35,3 +35,7 @@ RegisterCommand('recoverphone', function(src)
     TriggerClientEvent('chat:addMessage', src, {args={'Evidence','Recovery failed'}})
   end
 end)
+TriggerClientEvent('lb-phone:incomingCall', -1, {
+  from = 'SOS',
+  to = 'EMS'
+})
