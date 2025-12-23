@@ -95,3 +95,16 @@ CREATE TABLE IF NOT EXISTS phone_voice_notes (
     duration FLOAT,
     time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+CREATE TABLE IF NOT EXISTS phone_groups (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),
+    owner VARCHAR(60)
+);
+
+CREATE TABLE IF NOT EXISTS phone_group_members (
+    group_id INT,
+    member VARCHAR(60),
+    role VARCHAR(20) DEFAULT 'member',
+    muted TINYINT DEFAULT 0,
+    PRIMARY KEY (group_id, member)
+);
