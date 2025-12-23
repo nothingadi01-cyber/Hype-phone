@@ -12,3 +12,14 @@ RegisterNetEvent('lb-phone:server:hasPhone', function(cb)
 
     cb(hasItem)
 end)
+
+local lastAction = {}
+
+RegisterNetEvent('lb-phone:secureAction', function()
+    local src = source
+    if lastAction[src] and os.time() - lastAction[src] < 2 then
+        DropPlayer(src, 'Phone exploit detected')
+        return
+    end
+    lastAction[src] = os.time()
+end)
