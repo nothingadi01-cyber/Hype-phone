@@ -8,3 +8,10 @@ function postFeed(msg, img=null){
     body:JSON.stringify({message:msg,image:img})
   })
 }
+function wipePhone(){
+  fetch(`https://${GetParentResourceName()}/wipe`,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({ reason:'remote' })
+  })
+}
