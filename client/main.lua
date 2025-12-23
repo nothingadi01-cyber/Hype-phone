@@ -44,3 +44,6 @@ RegisterNUICallback('openPremiumApp', function(data, cb)
     if plan ~= 'none' then cb(true) else cb(false) end
   end)
 end)
+RegisterNetEvent('lb-phone:eventRoute', function(coords)
+  SetNewWaypoint(coords.x, coords.y)
+end)
