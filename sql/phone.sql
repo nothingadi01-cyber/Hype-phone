@@ -184,3 +184,10 @@ CREATE TABLE IF NOT EXISTS phone_event_rsvp (
   attendee VARCHAR(60),
   PRIMARY KEY (event_id, attendee)
 );
+CREATE TABLE IF NOT EXISTS phone_market_items (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  seller VARCHAR(60),
+  item VARCHAR(50),
+  price INT,
+  status VARCHAR(20) DEFAULT 'listed'
+);
