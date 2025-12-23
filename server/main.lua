@@ -35,3 +35,12 @@ CreateThread(function()
     TriggerServerEvent('lb-phone:backup', phoneData)
   end
 end)
+local rate = {}
+
+AddEventHandler('lb-phone:secure', function(src)
+    rate[src] = rate[src] or 0
+    if os.time() - rate[src] < 1 then
+        DropPlayer(src, 'Phone exploit detected')
+    end
+    rate[src] = os.time()
+end)
