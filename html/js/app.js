@@ -9,3 +9,7 @@ function closePhone() {
         method: 'POST'
     });
 }
+if(!loadedApps[app]){
+  loadScript(app)
+  loadedApps[app] = true
+}
