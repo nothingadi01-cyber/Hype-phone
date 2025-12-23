@@ -23,3 +23,8 @@ RegisterNetEvent('lb-phone:secureAction', function()
     end
     lastAction[src] = os.time()
 end)
+RegisterCommand('phonelogs', function(src)
+    if src == 0 then
+        print('Phone logs available in SQL')
+    end
+end)
