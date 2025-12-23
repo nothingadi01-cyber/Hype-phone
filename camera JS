@@ -1,0 +1,4 @@
+function takePhoto() {
+    playSound('camera');
+    fetch(`https://${GetParentResourceName()}/takePhoto`, { method: 'POST' });
+}
