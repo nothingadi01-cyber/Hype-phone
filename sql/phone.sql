@@ -125,3 +125,25 @@ CREATE TABLE IF NOT EXISTS phone_property_keys (
     holder VARCHAR(60),
     PRIMARY KEY (property_id, holder)
 );
+CREATE TABLE IF NOT EXISTS phone_security (
+  identifier VARCHAR(60) PRIMARY KEY,
+  pin VARCHAR(10) DEFAULT '1234',
+  locked TINYINT DEFAULT 0,
+  fails INT DEFAULT 0,
+  last_fail INT DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS phone_wipe_logs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  identifier VARCHAR(60),
+  reason VARCHAR(50),
+  by_who VARCHAR(60),
+  time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS phone_evidence (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  identifier VARCHAR(60),
+  recovered TINYINT DEFAULT 0,
+  time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
