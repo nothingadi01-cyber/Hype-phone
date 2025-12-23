@@ -12,3 +12,6 @@ local allowedCoords = vector3(-656.12, -858.32, 24.5)
 if #(GetEntityCoords(PlayerPedId()) - allowedCoords) < 5.0 then
    -- allow phone
 end
+Framework: ESX / QBCore
+Phone usage: Anywhere / MLO only
+GitHub: Public / Private
