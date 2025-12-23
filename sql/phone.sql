@@ -78,3 +78,11 @@ CREATE TABLE IF NOT EXISTS phone_settings (
     ringtone VARCHAR(50) DEFAULT 'ringtone',
     volume FLOAT DEFAULT 0.5
 );
+CREATE TABLE IF NOT EXISTS phone_social_posts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    author VARCHAR(60),
+    message TEXT,
+    image VARCHAR(255),
+    likes INT DEFAULT 0,
+    time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
