@@ -12,3 +12,4 @@ end
 function StopPhoneAnim()
     ClearPedTasks(PlayerPedId())
 end
+client/animations.lua
