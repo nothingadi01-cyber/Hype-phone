@@ -51,3 +51,8 @@ CreateThread(function()
   Wait(60000)
   TriggerClientEvent('lb-phone:notify', -1, '📦 Delivery arriving soon')
 end)
+RegisterCommand('phoneadmin', function(src)
+    if src == 0 then
+        print('Use admin panel via NUI or console.')
+    end
+end)
