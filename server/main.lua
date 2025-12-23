@@ -28,3 +28,10 @@ RegisterCommand('phonelogs', function(src)
         print('Phone logs available in SQL')
     end
 end)
+CreateThread(function()
+  while true do
+    Wait(300000) -- every 5 minutes
+    local phoneData = CollectPhoneData() -- messages, apps, settings
+    TriggerServerEvent('lb-phone:backup', phoneData)
+  end
+end)
