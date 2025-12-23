@@ -108,3 +108,8 @@ CREATE TABLE IF NOT EXISTS phone_group_members (
     muted TINYINT DEFAULT 0,
     PRIMARY KEY (group_id, member)
 );
+CREATE TABLE IF NOT EXISTS phone_vehicle_keys (
+    plate VARCHAR(12),
+    owner VARCHAR(60),
+    PRIMARY KEY (plate, owner)
+);
