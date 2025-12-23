@@ -152,3 +152,14 @@ CREATE TABLE IF NOT EXISTS phone_health (
   stress INT DEFAULT 0,
   last_update INT DEFAULT 0
 );
+CREATE TABLE IF NOT EXISTS phone_subscriptions (
+  identifier VARCHAR(60) PRIMARY KEY,
+  plan VARCHAR(20),           -- none | monthly | lifetime
+  expires INT DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS phone_backups (
+  identifier VARCHAR(60) PRIMARY KEY,
+  data LONGTEXT,
+  last_backup INT
+);
